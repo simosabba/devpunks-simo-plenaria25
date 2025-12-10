@@ -1,21 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import {
-  SlideContainer,
-  SlideTitle,
-  Typewriter,
-  FadeIn,
-} from "@/components/ui";
+import { SlideContainer, SlideTitle, Typewriter } from "@/components/ui";
 
 export default function Slide1() {
   const [line1Done, setLine1Done] = useState(false);
   const [line2Done, setLine2Done] = useState(false);
+  const [text1Done, setText1Done] = useState(false);
 
   return (
     <SlideContainer slideNumber={1}>
-      <div className="flex h-full items-start gap-24 pt-32">
-        <div className="flex flex-col gap-[2px]">
+      <div className="relative h-full">
+        <div className="flex flex-col items-start gap-[2px] pt-32">
           <SlideTitle>
             <Typewriter
               text="Ciao,"
@@ -35,10 +31,19 @@ export default function Slide1() {
         </div>
 
         {line2Done && (
-          <FadeIn delay={200} className="slide-content max-w-xl">
-            <p>sono un dev a cui piace parlare con altri dev</p>
-            <p>mi piace qualche stack</p>
-          </FadeIn>
+          <p className="slide-content absolute top-36 right-32 max-w-md text-right text-black">
+            <Typewriter
+              text="sono un dev a cui piace parlare con altri dev"
+              delay={30}
+              onComplete={() => setText1Done(true)}
+            />
+          </p>
+        )}
+
+        {text1Done && (
+          <p className="slide-content absolute bottom-24 right-16 -rotate-3 text-xl text-black">
+            <Typewriter text="mi piace qualche stack" delay={40} />
+          </p>
         )}
       </div>
     </SlideContainer>
