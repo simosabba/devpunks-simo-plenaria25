@@ -1,25 +1,31 @@
-import { ReactNode } from "react";
-import { SlideFooter } from "./SlideFooter";
-import { SlideNavigation } from "./SlideNavigation";
-import { SlideToolbar } from "./SlideToolbar";
+import { ReactNode } from "react"
+import { SlideFooter } from "./SlideFooter"
+import { SlideNavigation } from "./SlideNavigation"
+import { SlideToolbar } from "./SlideToolbar"
 
 interface SlideContainerProps {
-  children: ReactNode;
-  slideNumber: number;
-  totalSlides?: number;
+  children: ReactNode
+  slideNumber: number
+  totalSlides?: number
+  className?: string
 }
 
 export function SlideContainer({
   children,
   slideNumber,
   totalSlides = 3,
+  className = "",
 }: SlideContainerProps) {
   return (
-    <div className="relative flex min-h-screen w-full flex-col bg-white">
+    <div
+      className={
+        "relative flex min-h-screen w-full flex-col bg-white " + className
+      }
+    >
       <SlideNavigation currentSlide={slideNumber} totalSlides={totalSlides} />
       <SlideToolbar />
       <div className="flex-1 p-16">{children}</div>
       <SlideFooter slideNumber={slideNumber} />
     </div>
-  );
+  )
 }
