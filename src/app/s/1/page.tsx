@@ -36,7 +36,7 @@ export default function Slide1() {
       </div>
 
       {line2Done && (
-        <p className="absolute top-1/2 right-16 max-w-2xl -translate-y-1/2 text-right text-4xl text-black">
+        <p className="absolute top-26 right-16 max-w-3xl -translate-y-1/2 text-right text-4xl text-black">
           <Typewriter
             text="sono un dev a cui piace parlare con altri dev"
             delay={50}
@@ -55,11 +55,7 @@ export default function Slide1() {
         </p>
       )}
 
-      {text2Done && (
-        <div className="absolute bottom-8 left-0 right-0">
-          <TechLogos startDelay={300} itemDelay={120} />
-        </div>
-      )}
+      {text2Done && <TechLogos startDelay={200} itemDelay={200} />}
     </SlideContainer>
   )
 }
