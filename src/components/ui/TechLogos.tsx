@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
+import gsap from "gsap"
 
 const logos = [
   {
@@ -9,6 +10,9 @@ const logos = [
     rotate: -5,
     top: "15%",
     left: "45%",
+    floatY: -12,
+    floatDuration: 2.8,
+    floatDelay: 0,
   },
   {
     name: "React",
@@ -16,6 +20,9 @@ const logos = [
     rotate: 8,
     top: "60%",
     left: "25%",
+    floatY: -18,
+    floatDuration: 3.5,
+    floatDelay: 1.2,
   },
   {
     name: "Next.js",
@@ -23,6 +30,9 @@ const logos = [
     rotate: -3,
     top: "75%",
     left: "8%",
+    floatY: -10,
+    floatDuration: 2.2,
+    floatDelay: 2.5,
   },
   {
     name: "Node.js",
@@ -30,6 +40,9 @@ const logos = [
     rotate: 6,
     top: "75%",
     left: "50%",
+    floatY: -15,
+    floatDuration: 4.0,
+    floatDelay: 0.8,
   },
   {
     name: "NestJS",
@@ -37,6 +50,9 @@ const logos = [
     rotate: -7,
     top: "35%",
     left: "55%",
+    floatY: -20,
+    floatDuration: 3.2,
+    floatDelay: 1.8,
   },
   {
     name: ".NET",
@@ -44,6 +60,9 @@ const logos = [
     rotate: 4,
     top: "50%",
     left: "40%",
+    floatY: -8,
+    floatDuration: 2.5,
+    floatDelay: 3.0,
   },
   {
     name: "Terraform",
@@ -51,6 +70,9 @@ const logos = [
     rotate: -4,
     top: "80%",
     left: "70%",
+    floatY: -14,
+    floatDuration: 3.8,
+    floatDelay: 0.5,
   },
   {
     name: "AWS",
@@ -58,6 +80,9 @@ const logos = [
     rotate: 3,
     top: "40%",
     left: "80%",
+    floatY: -16,
+    floatDuration: 2.9,
+    floatDelay: 2.2,
   },
   {
     name: "Azure",
@@ -65,13 +90,19 @@ const logos = [
     rotate: -6,
     top: "65%",
     left: "85%",
+    floatY: -11,
+    floatDuration: 3.6,
+    floatDelay: 1.5,
   },
   {
     name: "Claude",
     src: "/logos/claude.png",
     rotate: 5,
-    top: "70%",
-    left: "18%",
+    top: "45%",
+    left: "65%",
+    floatY: -13,
+    floatDuration: 2.6,
+    floatDelay: 0.3,
   },
   {
     name: "Cursor",
@@ -79,6 +110,9 @@ const logos = [
     rotate: -8,
     top: "85%",
     left: "35%",
+    floatY: -17,
+    floatDuration: 3.3,
+    floatDelay: 2.8,
   },
 ]
 
@@ -89,6 +123,7 @@ interface TechLogosProps {
 
 export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
   const [visibleCount, setVisibleCount] = useState(0)
+  const logoRefs = useRef<(HTMLImageElement | null)[]>([])
 
   useEffect(() => {
     const startTimeout = setTimeout(() => {
@@ -108,6 +143,29 @@ export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
     return () => clearTimeout(startTimeout)
   }, [startDelay, itemDelay])
 
+  // GSAP floating animation
+  useEffect(() => {
+    logoRefs.current.forEach((el, index) => {
+      if (el && index < visibleCount) {
+        const logo = logos[index]
+        gsap.to(el, {
+          y: logo.floatY,
+          duration: logo.floatDuration,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: logo.floatDelay,
+        })
+      }
+    })
+
+    return () => {
+      logoRefs.current.forEach((el) => {
+        if (el) gsap.killTweensOf(el)
+      })
+    }
+  }, [visibleCount])
+
   return (
     <>
       {logos.map((logo, index) => (
@@ -126,6 +184,7 @@ export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
+            ref={(el) => { logoRefs.current[index] = el }}
             src={logo.src}
             alt={logo.name}
             title={logo.name}
