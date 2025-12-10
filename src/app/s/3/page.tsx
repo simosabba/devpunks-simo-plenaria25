@@ -79,9 +79,13 @@ export default function Slide3() {
               <p>
                 <strong>1.</strong>{" "}
                 <HighlightText className="font-bold">
-                  Se uso AI nel progetto
+                  Se uso AI nel progetto?
                 </HighlightText>
-                : <Typewriter text="si, tantissimo!" delay={60} />
+                <Typewriter
+                  text="Si, tantissimo!"
+                  delay={60}
+                  className="ml-2"
+                />
               </p>
             )}
 
@@ -89,20 +93,22 @@ export default function Slide3() {
               <p className="mt-6">
                 <strong>2.</strong>{" "}
                 <HighlightText className="font-bold">
-                  Come mi relaziono all&apos;uso dei tool dell&apos;AI
+                  Come mi relaziono all&apos;uso dei tool dell&apos;AI?
                 </HighlightText>
-                : <Typewriter text="li provo tutti!" delay={60} />
+                <Typewriter
+                  text="Li provo tutti!"
+                  delay={60}
+                  className="ml-2"
+                />
               </p>
             )}
 
             {step >= 3 && (
               <p className="mt-6">
-                <strong>3.</strong> Visione su{" "}
+                <strong>3.</strong>{" "}
                 <HighlightText className="font-bold">
-                  come l&apos;AI cambierà il lavoro degli sviluppatori
-                </HighlightText>{" "}
-                (automazione, pair programming avanzato, generazione di codice,
-                test intelligenti).
+                  Come l&apos;AI cambierà il lavoro degli sviluppatori?
+                </HighlightText>
               </p>
             )}
           </div>
