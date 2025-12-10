@@ -1,12 +1,12 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { SlideContainer, SlideTitle, Typewriter } from "@/components/ui";
+import { useState } from "react"
+import { SlideContainer, SlideTitle, Typewriter } from "@/components/ui"
 
 export default function Slide1() {
-  const [line1Done, setLine1Done] = useState(false);
-  const [line2Done, setLine2Done] = useState(false);
-  const [text1Done, setText1Done] = useState(false);
+  const [line1Done, setLine1Done] = useState(false)
+  const [line2Done, setLine2Done] = useState(false)
+  const [text1Done, setText1Done] = useState(false)
 
   return (
     <SlideContainer slideNumber={1}>
@@ -31,7 +31,7 @@ export default function Slide1() {
         </div>
 
         {line2Done && (
-          <p className="slide-content absolute top-36 right-32 max-w-md text-right text-black">
+          <p className="absolute top-1/2 right-16 max-w-2xl -translate-y-1/2 text-right text-4xl text-black">
             <Typewriter
               text="sono un dev a cui piace parlare con altri dev"
               delay={30}
@@ -41,11 +41,11 @@ export default function Slide1() {
         )}
 
         {text1Done && (
-          <p className="slide-content absolute bottom-24 right-16 -rotate-3 text-xl text-black">
+          <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
             <Typewriter text="mi piace qualche stack" delay={40} />
           </p>
         )}
       </div>
     </SlideContainer>
-  );
+  )
 }
