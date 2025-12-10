@@ -34,7 +34,7 @@ export default function Slide1() {
           <p className="absolute top-1/2 right-16 max-w-2xl -translate-y-1/2 text-right text-4xl text-black">
             <Typewriter
               text="sono un dev a cui piace parlare con altri dev"
-              delay={30}
+              delay={50}
               onComplete={() => setText1Done(true)}
             />
           </p>
@@ -42,7 +42,7 @@ export default function Slide1() {
 
         {text1Done && (
           <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
-            <Typewriter text="mi piace qualche stack" delay={40} />
+            <Typewriter text="mi piace qualche stack" delay={90} />
           </p>
         )}
       </div>
