@@ -2,3 +2,4 @@ export { SlideContainer } from "./SlideContainer";
 export { SlideTitle } from "./SlideTitle";
 export { HighlightText } from "./HighlightText";
 export { SlideFooter } from "./SlideFooter";
+export { SlideNavigation } from "./SlideNavigation";
