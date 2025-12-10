@@ -25,6 +25,13 @@ export default function Slide3() {
         } else if (step === 3) {
           router.push("/s/4")
         }
+      } else if (e.key === "ArrowLeft") {
+        if (step > 0) {
+          e.stopPropagation()
+          setStep((prev) => prev - 1)
+        } else {
+          router.push("/s/2")
+        }
       }
     }
 
