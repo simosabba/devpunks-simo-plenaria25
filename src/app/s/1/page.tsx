@@ -22,6 +22,7 @@ export default function Slide1() {
             text="Ciao,"
             delay={100}
             onComplete={() => setLine1Done(true)}
+            className="text-7xl"
           />
         </SlideTitle>
         {line1Done && (
@@ -30,6 +31,7 @@ export default function Slide1() {
               text="sono Simo"
               delay={80}
               onComplete={() => setLine2Done(true)}
+              className="text-7xl"
             />
           </SlideTitle>
         )}
