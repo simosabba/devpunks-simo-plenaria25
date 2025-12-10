@@ -1,4 +1,4 @@
-import { SlideContainer, SlideTitle, HighlightText } from "@/components/ui";
+import { SlideContainer, SlideTitle, HighlightText } from "@/components/ui"
 
 export default function Slide1() {
   return (
@@ -11,17 +11,11 @@ export default function Slide1() {
 
         <div className="slide-content max-w-xl">
           <p>
-            <HighlightText className="font-bold underline">
-              Presentarti brevemente
-            </HighlightText>
-            :
-          </p>
-          <p>
-            ruolo, competenze chiave e{" "}
-            <span className="underline">stack</span> tecnologico..
+            ruolo, competenze chiave e <span className="underline">stack</span>{" "}
+            tecnologico..
           </p>
         </div>
       </div>
     </SlideContainer>
-  );
+  )
 }
