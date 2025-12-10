@@ -20,6 +20,12 @@ export function SlideNavigation({
         router.push(`/s/${currentSlide + 1}`);
       } else if (e.key === "ArrowLeft" && currentSlide > 1) {
         router.push(`/s/${currentSlide - 1}`);
+      } else if (e.key === "f" || e.key === "F") {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
       }
     };
 
