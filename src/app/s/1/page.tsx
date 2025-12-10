@@ -1,12 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import { SlideContainer, SlideTitle, Typewriter } from "@/components/ui"
+import { SlideContainer, SlideTitle, Typewriter, TechLogos } from "@/components/ui"
 
 export default function Slide1() {
   const [line1Done, setLine1Done] = useState(false)
   const [line2Done, setLine2Done] = useState(false)
   const [text1Done, setText1Done] = useState(false)
+  const [text2Done, setText2Done] = useState(false)
 
   return (
     <SlideContainer slideNumber={1}>
@@ -42,8 +43,18 @@ export default function Slide1() {
 
         {text1Done && (
           <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
-            <Typewriter text="mi piace qualche stack" delay={90} />
+            <Typewriter
+              text="mi piace qualche stack"
+              delay={90}
+              onComplete={() => setText2Done(true)}
+            />
           </p>
+        )}
+
+        {text2Done && (
+          <div className="absolute bottom-8 left-0 right-0">
+            <TechLogos startDelay={300} itemDelay={120} />
+          </div>
         )}
       </div>
     </SlideContainer>
