@@ -11,6 +11,7 @@ import {
 export default function Slide3() {
   const [line1Done, setLine1Done] = useState(false)
   const [line2Done, setLine2Done] = useState(false)
+  const [line3Done, setLine3Done] = useState(false)
 
   return (
     <SlideContainer slideNumber={3}>
@@ -39,30 +40,23 @@ export default function Slide3() {
               <Typewriter
                 text="dev con l'AI?"
                 delay={80}
+                onComplete={() => setLine3Done(true)}
                 className="text-7xl"
               />
             </SlideTitle>
           )}
         </div>
 
-        <div className="slide-content max-w-2xl">
-          <p>
-            <strong>1.</strong>{" "}
-            <HighlightText className="font-bold underline">
-              Se uso AI nel progetto
-            </HighlightText>
-            :
-          </p>
-          <p>
-            Una panoramica dei casi d&apos;uso dell&apos;AI integrati nel
-            progetto e dei tool/tecniche AI adottate nel progetto (ML, LLM,
-            automazioni, agenti, ecc.).
-          </p>
-          <p>
-            Benefici concreti sul progetto, ad es. riduzione del tempo di
-            sviluppo, maggiore qualità del codice, miglioramento delle
-            funzionalità del prodotto.
-          </p>
+        {line3Done && (
+          <div className="slide-content max-w-2xl">
+            <p>
+              <strong>1.</strong>{" "}
+              <HighlightText className="font-bold">
+                Se uso AI nel progetto
+              </HighlightText>
+              :{" "}
+              <Typewriter text="si, tantissimo!" delay={60} />
+            </p>
 
           <p className="mt-6">
             <strong>2.</strong>{" "}
@@ -80,7 +74,8 @@ export default function Slide3() {
             (automazione, pair programming avanzato, generazione di codice, test
             intelligenti).
           </p>
-        </div>
+          </div>
+        )}
       </div>
     </SlideContainer>
   )
