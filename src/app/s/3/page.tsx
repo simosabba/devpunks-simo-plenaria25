@@ -1,13 +1,48 @@
-import { SlideContainer, SlideTitle, HighlightText } from "@/components/ui";
+"use client"
+
+import { useState } from "react"
+import {
+  SlideContainer,
+  SlideTitle,
+  HighlightText,
+  Typewriter,
+} from "@/components/ui"
 
 export default function Slide3() {
+  const [line1Done, setLine1Done] = useState(false)
+  const [line2Done, setLine2Done] = useState(false)
+
   return (
     <SlideContainer slideNumber={3}>
       <div className="flex h-full items-start gap-24 pt-16">
         <div className="flex flex-shrink-0 flex-col gap-2">
-          <SlideTitle>Come cambia</SlideTitle>
-          <SlideTitle>il mondo dei</SlideTitle>
-          <SlideTitle>dev con l&apos;AI?</SlideTitle>
+          <SlideTitle>
+            <Typewriter
+              text="Come cambia"
+              delay={80}
+              onComplete={() => setLine1Done(true)}
+              className="text-7xl"
+            />
+          </SlideTitle>
+          {line1Done && (
+            <SlideTitle>
+              <Typewriter
+                text="il mondo dei"
+                delay={80}
+                onComplete={() => setLine2Done(true)}
+                className="text-7xl"
+              />
+            </SlideTitle>
+          )}
+          {line2Done && (
+            <SlideTitle>
+              <Typewriter
+                text="dev con l'AI?"
+                delay={80}
+                className="text-7xl"
+              />
+            </SlideTitle>
+          )}
         </div>
 
         <div className="slide-content max-w-2xl">
@@ -48,5 +83,5 @@ export default function Slide3() {
         </div>
       </div>
     </SlideContainer>
-  );
+  )
 }
