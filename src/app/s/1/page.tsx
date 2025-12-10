@@ -48,7 +48,7 @@ export default function Slide1() {
       {text1Done && (
         <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
           <Typewriter
-            text="mi piace qualche stack"
+            text="e mi piace qualche stack"
             delay={90}
             onComplete={() => setText2Done(true)}
           />
