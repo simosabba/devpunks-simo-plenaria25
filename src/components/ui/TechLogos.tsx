@@ -23,6 +23,7 @@ const logos = [
     floatY: -18,
     floatDuration: 3.5,
     floatDelay: 1.2,
+    spin: true,
   },
   {
     name: "Next.js",
@@ -106,7 +107,7 @@ const logos = [
   },
   {
     name: "Cursor",
-    src: "/logos/cursor.svg",
+    src: "/logos/cursor.png",
     rotate: -8,
     top: "85%",
     left: "35%",
@@ -148,6 +149,7 @@ export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
     logoRefs.current.forEach((el, index) => {
       if (el && index < visibleCount) {
         const logo = logos[index]
+        // Floating animation
         gsap.to(el, {
           y: logo.floatY,
           duration: logo.floatDuration,
@@ -156,6 +158,15 @@ export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
           ease: "sine.inOut",
           delay: logo.floatDelay,
         })
+        // Spin animation for React
+        if (logo.spin) {
+          gsap.to(el, {
+            rotation: 360,
+            duration: 8,
+            repeat: -1,
+            ease: "none",
+          })
+        }
       }
     })
 
@@ -184,7 +195,9 @@ export function TechLogos({ startDelay = 0, itemDelay = 250 }: TechLogosProps) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            ref={(el) => { logoRefs.current[index] = el }}
+            ref={(el) => {
+              logoRefs.current[index] = el
+            }}
             src={logo.src}
             alt={logo.name}
             title={logo.name}
