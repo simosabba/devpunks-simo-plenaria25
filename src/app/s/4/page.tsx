@@ -9,7 +9,7 @@ export default function Slide4() {
 
   return (
     <SlideContainer slideNumber={4}>
-      <div className="pt-16">
+      <div>
         <div className="flex flex-col items-start gap-[2px]">
           <h1 className="slide-title min-w-[320px] bg-black px-4 text-center text-7xl font-bold text-white">
             <Typewriter
