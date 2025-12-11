@@ -51,16 +51,16 @@ export default function Slide4() {
       {/* Arrow 1: Left to Right (top) */}
       {step >= 1 && (
         <svg
-          className="absolute left-[390px] top-[170px]"
-          width="380"
+          className="absolute left-[400px] top-[170px]"
+          width="550"
           height="40"
-          viewBox="0 0 380 40"
+          viewBox="0 0 550 40"
           fill="none"
         >
           <motion.line
             x1="0"
             y1="20"
-            x2="360"
+            x2="530"
             y2="20"
             stroke="black"
             strokeWidth="3"
@@ -70,7 +70,7 @@ export default function Slide4() {
             transition={{ duration: 0.6, ease: "easeInOut" }}
           />
           <motion.polygon
-            points="360,12 380,20 360,28"
+            points="530,12 550,20 530,28"
             fill="black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,17 +97,17 @@ export default function Slide4() {
       {/* Arrow 2: Top to Bottom (right side) */}
       {step >= 3 && (
         <svg
-          className="absolute right-[230px] top-[310px]"
+          className="absolute right-[260px] top-[300px]"
           width="40"
-          height="240"
-          viewBox="0 0 40 240"
+          height="200"
+          viewBox="0 0 40 200"
           fill="none"
         >
           <motion.line
             x1="20"
             y1="0"
             x2="20"
-            y2="220"
+            y2="180"
             stroke="black"
             strokeWidth="3"
             strokeLinecap="square"
@@ -116,7 +116,7 @@ export default function Slide4() {
             transition={{ duration: 0.6, ease: "easeInOut" }}
           />
           <motion.polygon
-            points="12,220 20,240 28,220"
+            points="12,180 20,200 28,180"
             fill="black"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -143,14 +143,14 @@ export default function Slide4() {
       {/* Arrow 3: Right to Left (bottom) */}
       {step >= 5 && (
         <svg
-          className="absolute bottom-[170px] left-[390px]"
-          width="380"
+          className="absolute bottom-[170px] left-[400px]"
+          width="550"
           height="40"
-          viewBox="0 0 380 40"
+          viewBox="0 0 550 40"
           fill="none"
         >
           <motion.line
-            x1="380"
+            x1="550"
             y1="20"
             x2="20"
             y2="20"
@@ -189,15 +189,15 @@ export default function Slide4() {
       {/* Arrow 4: Bottom to Top (left side) */}
       {step >= 7 && (
         <svg
-          className="absolute left-[220px] top-[320px]"
+          className="absolute left-[220px] top-[300px]"
           width="40"
-          height="260"
-          viewBox="0 0 40 260"
+          height="200"
+          viewBox="0 0 40 200"
           fill="none"
         >
           <motion.line
             x1="20"
-            y1="260"
+            y1="200"
             x2="20"
             y2="20"
             stroke="black"
