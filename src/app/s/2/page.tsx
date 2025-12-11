@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
+import { motion } from "motion/react"
+import Image from "next/image"
 import {
   SlideContainer,
   SlideTitle,
@@ -19,10 +21,10 @@ export default function Slide2() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
-        if (line3Done && step < 2) {
+        if (line3Done && step < 5) {
           e.stopPropagation()
           setStep((prev) => prev + 1)
-        } else if (step === 2) {
+        } else if (step === 5) {
           router.push("/s/3")
         }
       } else if (e.key === "ArrowLeft") {
@@ -86,6 +88,64 @@ export default function Slide2() {
                   <Typewriter text="Cose che ho visto quest'anno" delay={60} />
                 </HighlightText>
               </p>
+            )}
+
+            {/* AI Illustration */}
+            {step >= 3 && (
+              <motion.div
+                className="mt-10 flex flex-wrap items-center gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                  Agents / LLM
+                </div>
+                <span className="text-3xl">+</span>
+                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                  RAG
+                </div>
+                <span className="text-3xl">+</span>
+                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                  AI Automation
+                </div>
+              </motion.div>
+            )}
+
+            {/* Terraform Logo */}
+            {step >= 4 && (
+              <motion.div
+                className="mt-8 flex items-center gap-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                <Image
+                  src="/logos/terraform-original.svg"
+                  alt="Terraform CDK"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+                <span className="text-3xl font-bold">Terraform</span>
+              </motion.div>
+            )}
+
+            {/* Placeholder for last logo */}
+            {step >= 5 && (
+              <motion.div
+                className="mt-8 flex items-center gap-4"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex h-20 w-20 items-center justify-center rounded-lg border-2 border-dashed border-gray-400 bg-gray-50">
+                  <span className="text-3xl text-gray-400">?</span>
+                </div>
+                <span className="text-3xl font-bold text-gray-400">
+                  Coming soon...
+                </span>
+              </motion.div>
             )}
           </div>
         )}
