@@ -13,7 +13,7 @@ interface SlideContainerProps {
 export function SlideContainer({
   children,
   slideNumber,
-  totalSlides = 3,
+  totalSlides = 4,
   className = "",
 }: SlideContainerProps) {
   return (
