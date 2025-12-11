@@ -115,7 +115,7 @@ export default function Slide4() {
         )}
 
         {arrowDone && (
-          <div className="absolute left-[400px] top-[550px] flex flex-col items-start gap-[2px]">
+          <div className="absolute left-[406px] top-[500px] flex flex-col items-start gap-[2px]">
             <h1 className="slide-title min-w-[420px] bg-black px-4 text-center text-6xl font-bold text-white">
               <Typewriter text="horizontal" delay={80} />
             </h1>
