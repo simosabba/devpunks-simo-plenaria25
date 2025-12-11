@@ -84,7 +84,7 @@ export default function Slide3() {
             </div>
 
             {line3Done && (
-              <div className="slide-content max-w-2xl">
+              <div className="max-w-5xl text-4xl">
                 {step >= 1 && (
                   <p>
                     <strong>1.</strong>{" "}
@@ -100,7 +100,7 @@ export default function Slide3() {
                 )}
 
                 {step >= 2 && (
-                  <p className="mt-6">
+                  <p className="mt-8">
                     <strong>2.</strong>{" "}
                     <HighlightText className="font-bold">
                       Come mi relaziono all&apos;uso dei tool dell&apos;AI?
@@ -114,7 +114,7 @@ export default function Slide3() {
                 )}
 
                 {step >= 3 && (
-                  <p className="mt-6">
+                  <p className="mt-8">
                     <strong>3.</strong>{" "}
                     <HighlightText className="font-bold">
                       Come l&apos;AI cambierà il lavoro degli sviluppatori?
