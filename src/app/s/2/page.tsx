@@ -76,7 +76,7 @@ export default function Slide2() {
         </div>
 
         {step >= 1 && (
-          <div className="max-w-3xl">
+          <div className="max-w-4xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
                 <Typewriter text="Tanti ma in primis Devpunks" delay={60} />
@@ -93,20 +93,20 @@ export default function Slide2() {
             {/* AI Illustration */}
             {step >= 3 && (
               <motion.div
-                className="mt-32 flex flex-wrap items-center gap-4"
+                className="mt-32 flex flex-wrap items-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
+                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
                   Agents / LLM
                 </div>
-                <span className="text-3xl">+</span>
-                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
+                <span className="text-5xl">+</span>
+                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
                   RAG
                 </div>
-                <span className="text-3xl">+</span>
-                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
+                <span className="text-5xl">+</span>
+                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
                   AI Automation
                 </div>
               </motion.div>
