@@ -115,19 +115,21 @@ export default function Slide2() {
             {/* Terraform Logo */}
             {step >= 4 && (
               <motion.div
-                className="mt-8 flex items-center gap-4"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
+                className="mt-16 flex items-center gap-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <Image
-                  src="/logos/terraform-original.svg"
-                  alt="Terraform CDK"
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
-                <span className="text-3xl font-bold">Terraform CDK</span>
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/terraform-original.svg"
+                    alt="Terraform CDK"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                  <span className="text-4xl font-bold">Terraform CDK</span>
+                </div>
               </motion.div>
             )}
 
