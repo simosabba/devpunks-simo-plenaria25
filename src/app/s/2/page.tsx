@@ -122,7 +122,7 @@ export default function Slide2() {
                 <span className="text-5xl">+</span>
                 <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
                   <Image
-                    src="/logos/n8n.png"
+                    src="/logos/n8n_.png"
                     alt="n8n"
                     width={50}
                     height={50}
