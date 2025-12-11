@@ -93,29 +93,29 @@ export default function Slide4() {
             <motion.line
               x1="0"
               y1="380"
-              x2="500"
+              x2="250"
               y2="380"
               stroke="black"
               strokeWidth="3"
               strokeLinecap="square"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 0.9, delay: 0.8, ease: "easeInOut" }}
+              transition={{ duration: 0.5, delay: 0.8, ease: "easeInOut" }}
               onAnimationComplete={() => setArrowDone(true)}
             />
             {/* Arrow head */}
             <motion.polygon
-              points="500,372 520,380 500,388"
+              points="250,372 270,380 250,388"
               fill="black"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.2, delay: 1.7 }}
+              transition={{ duration: 0.2, delay: 1.3 }}
             />
           </svg>
         )}
 
         {arrowDone && (
-          <div className="absolute left-[655px] top-[570px] flex flex-col items-start gap-[2px]">
+          <div className="absolute left-[400px] top-[550px] flex flex-col items-start gap-[2px]">
             <h1 className="slide-title min-w-[420px] bg-black px-4 text-center text-6xl font-bold text-white">
               <Typewriter text="horizontal" delay={80} />
             </h1>
