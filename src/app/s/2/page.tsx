@@ -19,10 +19,10 @@ export default function Slide2() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
-        if (line3Done && step < 1) {
+        if (line3Done && step < 2) {
           e.stopPropagation()
           setStep((prev) => prev + 1)
-        } else if (step === 1) {
+        } else if (step === 2) {
           router.push("/s/3")
         }
       } else if (e.key === "ArrowLeft") {
@@ -74,12 +74,19 @@ export default function Slide2() {
         </div>
 
         {step >= 1 && (
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
                 <Typewriter text="Tanti ma in primis Devpunks" delay={60} />
               </HighlightText>
             </p>
+            {step >= 2 && (
+              <p className="mt-8 text-5xl">
+                <HighlightText className="font-bold">
+                  <Typewriter text="Cose che ho visto quest'anno" delay={60} />
+                </HighlightText>
+              </p>
+            )}
           </div>
         )}
       </div>
