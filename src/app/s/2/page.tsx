@@ -93,20 +93,20 @@ export default function Slide2() {
             {/* AI Illustration */}
             {step >= 3 && (
               <motion.div
-                className="mt-10 flex flex-wrap items-center gap-4"
+                className="mt-32 flex flex-wrap items-center gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
                   Agents / LLM
                 </div>
                 <span className="text-3xl">+</span>
-                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
                   RAG
                 </div>
                 <span className="text-3xl">+</span>
-                <div className="rounded-lg border-2 border-black bg-gray-100 px-4 py-2 text-2xl font-bold">
+                <div className="border-2 border-black bg-white px-4 py-2 text-2xl font-bold">
                   AI Automation
                 </div>
               </motion.div>
@@ -127,7 +127,7 @@ export default function Slide2() {
                   height={80}
                   className="object-contain"
                 />
-                <span className="text-3xl font-bold">Terraform</span>
+                <span className="text-3xl font-bold">Terraform CDK</span>
               </motion.div>
             )}
 
