@@ -21,10 +21,10 @@ export default function Slide2() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
-        if (line3Done && step < 5) {
+        if (line3Done && step < 4) {
           e.stopPropagation()
           setStep((prev) => prev + 1)
-        } else if (step === 5) {
+        } else if (step === 4) {
           router.push("/s/3")
         }
       } else if (e.key === "ArrowLeft") {
@@ -79,19 +79,12 @@ export default function Slide2() {
           <div className="max-w-8xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
-                <Typewriter text="Tanti..." delay={60} />
+                <Typewriter text="Tanti e ho visto un po di cose nuove" delay={60} />
               </HighlightText>
             </p>
-            {step >= 2 && (
-              <p className="mt-8 text-5xl">
-                <HighlightText className="font-bold">
-                  <Typewriter text="Cose che ho visto quest'anno" delay={60} />
-                </HighlightText>
-              </p>
-            )}
 
             {/* AI Illustration */}
-            {step >= 3 && (
+            {step >= 2 && (
               <motion.div
                 className="mt-32 flex flex-wrap items-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -134,7 +127,7 @@ export default function Slide2() {
             )}
 
             {/* Terraform Logo */}
-            {step >= 4 && (
+            {step >= 3 && (
               <motion.div
                 className="mt-24 flex items-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
@@ -154,8 +147,8 @@ export default function Slide2() {
               </motion.div>
             )}
 
-            {/* PowerPoint + Cursor */}
-            {step >= 5 && (
+            {/* PowerPoint + Claude Code */}
+            {step >= 4 && (
               <motion.div
                 className="mt-24 flex items-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
