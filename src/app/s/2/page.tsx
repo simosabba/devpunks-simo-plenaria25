@@ -142,6 +142,13 @@ export default function Slide2() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/powerpoint.png"
+                    alt="PowerPoint"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
                   <span className="text-4xl font-bold">PowerPoint</span>
                 </div>
                 <svg width="60" height="24" viewBox="0 0 60 24" fill="none">
