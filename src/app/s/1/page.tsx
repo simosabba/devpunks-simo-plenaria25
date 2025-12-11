@@ -40,7 +40,7 @@ export default function Slide1() {
       {line2Done && (
         <p className="absolute top-26 right-16 max-w-3xl -translate-y-1/2 text-right text-4xl text-black">
           <Typewriter
-            text="sono un dev a cui piace parlare con altri dev"
+            text="sono un dev a cui piace provare tante cose"
             delay={50}
             onComplete={() => setText1Done(true)}
           />
@@ -50,7 +50,7 @@ export default function Slide1() {
       {text1Done && (
         <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
           <Typewriter
-            text="e mi piace provare tante cose"
+            text="per costruire altre cose"
             delay={90}
             onComplete={() => setText2Done(true)}
           />

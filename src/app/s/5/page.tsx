@@ -23,7 +23,7 @@ export default function Slide5() {
   return (
     <SlideContainer slideNumber={5} totalSlides={5}>
       <motion.div
-        className="flex h-full items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
