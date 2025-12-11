@@ -71,9 +71,9 @@ export default function Slide4() {
         {showArrow && (
           <svg
             className="absolute left-[135px] top-[240px]"
-            width="500"
-            height="300"
-            viewBox="0 0 500 300"
+            width="600"
+            height="400"
+            viewBox="0 0 600 400"
             fill="none"
           >
             {/* Vertical line going down */}
@@ -81,41 +81,41 @@ export default function Slide4() {
               x1="2"
               y1="0"
               x2="2"
-              y2="200"
+              y2="380"
               stroke="black"
               strokeWidth="3"
               strokeLinecap="square"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
             />
             {/* Horizontal line going right */}
             <motion.line
               x1="0"
-              y1="200"
-              x2="400"
-              y2="200"
+              y1="380"
+              x2="500"
+              y2="380"
               stroke="black"
               strokeWidth="3"
               strokeLinecap="square"
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeInOut" }}
+              transition={{ duration: 0.9, delay: 0.8, ease: "easeInOut" }}
               onAnimationComplete={() => setArrowDone(true)}
             />
             {/* Arrow head */}
             <motion.polygon
-              points="400,192 420,200 400,208"
+              points="500,372 520,380 500,388"
               fill="black"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.2, delay: 1.4 }}
+              transition={{ duration: 0.2, delay: 1.7 }}
             />
           </svg>
         )}
 
         {arrowDone && (
-          <div className="absolute left-[555px] top-[390px] flex flex-col items-start gap-[2px]">
+          <div className="absolute left-[655px] top-[570px] flex flex-col items-start gap-[2px]">
             <h1 className="slide-title min-w-[420px] bg-black px-4 text-center text-6xl font-bold text-white">
               <Typewriter text="horizontal" delay={80} />
             </h1>
