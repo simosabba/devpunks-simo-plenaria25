@@ -76,7 +76,7 @@ export default function Slide2() {
         </div>
 
         {step >= 1 && (
-          <div className="max-w-4xl">
+          <div className="max-w-8xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
                 <Typewriter text="Tanti ma in primis Devpunks" delay={60} />
@@ -98,16 +98,37 @@ export default function Slide2() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
-                  Agents / LLM
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/ai-sdk.png"
+                    alt="AI SDK"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                  <span className="text-4xl font-bold">Agents / LLM</span>
                 </div>
                 <span className="text-5xl">+</span>
-                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
-                  RAG
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/qdrant.png"
+                    alt="Qdrant"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                  <span className="text-4xl font-bold">RAG</span>
                 </div>
                 <span className="text-5xl">+</span>
-                <div className="border-2 border-black bg-white px-6 py-4 text-4xl font-bold">
-                  AI Automation
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/n8n.png"
+                    alt="n8n"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                  <span className="text-4xl font-bold">AI Automation</span>
                 </div>
               </motion.div>
             )}
