@@ -1,7 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { SlideContainer, SlideTitle, HighlightText, Typewriter } from "@/components/ui"
+import {
+  SlideContainer,
+  SlideTitle,
+  HighlightText,
+  Typewriter,
+} from "@/components/ui"
 
 export default function Slide2() {
   const [line1Done, setLine1Done] = useState(false)
@@ -39,22 +44,8 @@ export default function Slide2() {
         <div className="slide-content max-w-2xl">
           <p>
             <HighlightText className="font-bold">
-              Descrizione del progetto
+              Tanti ma in primis Devpunks
             </HighlightText>
-          </p>
-          <p>
-            obiettivi, contesto, problemi che risolve e valore per gli utenti.
-          </p>
-
-          <p className="mt-8">
-            Contributo personale: responsabilità principali, risultati ottenuti,
-            impatti misurabili.
-          </p>
-
-          <p className="mt-8">
-            Lavoro con altri <span className="underline">Devpunkers</span>? Se
-            sì, cosa ho imparato da loro e che problemi mi hanno aiutato a
-            risolvere?
           </p>
         </div>
       </div>
