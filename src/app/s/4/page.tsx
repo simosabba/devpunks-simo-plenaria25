@@ -97,7 +97,7 @@ export default function Slide4() {
       {/* Arrow 2: Top to Bottom (right side) */}
       {step >= 3 && (
         <svg
-          className="absolute right-[260px] top-[300px]"
+          className="absolute right-[260px] top-1/2 -translate-y-1/2"
           width="40"
           height="200"
           viewBox="0 0 40 200"
@@ -189,7 +189,7 @@ export default function Slide4() {
       {/* Arrow 4: Bottom to Top (left side) */}
       {step >= 7 && (
         <svg
-          className="absolute left-[220px] top-[300px]"
+          className="absolute left-[220px] top-1/2 -translate-y-1/2"
           width="40"
           height="200"
           viewBox="0 0 40 200"
