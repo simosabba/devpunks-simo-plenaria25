@@ -79,7 +79,7 @@ export default function Slide2() {
           <div className="max-w-8xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
-                <Typewriter text="Tanti ma in primis Devpunks" delay={60} />
+                <Typewriter text="Tanti..." delay={60} />
               </HighlightText>
             </p>
             {step >= 2 && (
