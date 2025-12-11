@@ -9,8 +9,8 @@ export default function Slide4() {
 
   return (
     <SlideContainer slideNumber={4}>
-      <div className="flex h-full items-center justify-center">
-        <div className="flex flex-col items-center gap-[2px]">
+      <div className="pt-16">
+        <div className="flex flex-col items-start gap-[2px]">
           <h1 className="slide-title min-w-[320px] bg-black px-4 text-center text-7xl font-bold text-white">
             <Typewriter
               text="coders"
