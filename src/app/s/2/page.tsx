@@ -115,7 +115,7 @@ export default function Slide2() {
             {/* Terraform Logo */}
             {step >= 4 && (
               <motion.div
-                className="mt-16 flex items-center gap-6"
+                className="mt-24 flex items-center gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -133,20 +133,38 @@ export default function Slide2() {
               </motion.div>
             )}
 
-            {/* Placeholder for last logo */}
+            {/* PowerPoint + Cursor */}
             {step >= 5 && (
               <motion.div
-                className="mt-8 flex items-center gap-4"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
+                className="mt-24 flex items-center gap-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <div className="flex h-20 w-20 items-center justify-center rounded-lg border-2 border-dashed border-gray-400 bg-gray-50">
-                  <span className="text-3xl text-gray-400">?</span>
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <span className="text-4xl font-bold">PowerPoint</span>
                 </div>
-                <span className="text-3xl font-bold text-gray-400">
-                  Coming soon...
-                </span>
+                <svg width="60" height="24" viewBox="0 0 60 24" fill="none">
+                  <line
+                    x1="0"
+                    y1="12"
+                    x2="45"
+                    y2="12"
+                    stroke="black"
+                    strokeWidth="3"
+                  />
+                  <polygon points="45,6 60,12 45,18" fill="black" />
+                </svg>
+                <div className="flex items-center gap-4 border-2 border-black bg-white px-6 py-4">
+                  <Image
+                    src="/logos/claude.png"
+                    alt="Claude Code"
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                  <span className="text-4xl font-bold">Claude Code</span>
+                </div>
               </motion.div>
             )}
           </div>
