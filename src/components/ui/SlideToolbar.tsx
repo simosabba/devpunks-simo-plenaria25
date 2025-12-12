@@ -6,6 +6,9 @@ export function SlideToolbar() {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
+    // Check current fullscreen state on mount
+    setIsFullscreen(!!document.fullscreenElement);
+
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
     };
