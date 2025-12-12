@@ -79,7 +79,10 @@ export default function Slide2() {
           <div className="max-w-8xl">
             <p className="text-5xl">
               <HighlightText className="font-bold">
-                <Typewriter text="Tanti e ho visto un po di cose nuove" delay={60} />
+                <Typewriter
+                  text="Di tutto un po e ho visto anche qualche cosetta nuova"
+                  delay={60}
+                />
               </HighlightText>
             </p>
 
