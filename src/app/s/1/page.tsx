@@ -19,7 +19,7 @@ export default function Slide1() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+      if (e.key === "ArrowRight" || e.key === "PageDown") {
         if (step === 0) {
           e.stopPropagation()
           setStep(1)

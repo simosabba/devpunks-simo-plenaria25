@@ -12,14 +12,14 @@ export default function Slide4() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+      if (e.key === "ArrowRight" || e.key === "PageDown") {
         if (step < 7) {
           e.stopPropagation()
           setStep((prev) => prev + 1)
         } else {
           router.push("/s/5")
         }
-      } else if (e.key === "ArrowLeft") {
+      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
         if (step > 0) {
           e.stopPropagation()
           setStep((prev) => prev - 1)

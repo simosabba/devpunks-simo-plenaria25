@@ -20,14 +20,14 @@ export default function Slide2() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
+      if (e.key === "ArrowRight" || e.key === "PageDown") {
         if (line3Done && step < 4) {
           e.stopPropagation()
           setStep((prev) => prev + 1)
         } else if (step === 4) {
           router.push("/s/3")
         }
-      } else if (e.key === "ArrowLeft") {
+      } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
         if (step > 0) {
           e.stopPropagation()
           setStep((prev) => prev - 1)

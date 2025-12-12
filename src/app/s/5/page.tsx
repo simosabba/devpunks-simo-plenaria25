@@ -10,7 +10,7 @@ export default function Slide5() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
+      if (e.key === "ArrowLeft" || e.key === "PageUp") {
         router.push("/s/4")
       }
       // No ArrowRight handler - this is the last slide
