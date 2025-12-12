@@ -38,13 +38,13 @@ export default function Slide4() {
       {/* Top Left: coders vs builders */}
       <div className="absolute left-20 top-20 flex flex-col items-start gap-[2px]">
         <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
-          <Typewriter text="coders" delay={100} />
+          <Typewriter text="coders" delay={50} />
         </h1>
         <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
           <HighlightText>vs</HighlightText>
         </h1>
         <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
-          <Typewriter text="builders" delay={100} />
+          <Typewriter text="builders" delay={50} />
         </h1>
       </div>
 
@@ -83,13 +83,13 @@ export default function Slide4() {
       {step >= 2 && (
         <div className="absolute right-20 top-20 flex flex-col items-start gap-[2px]">
           <h1 className="slide-title min-w-[340px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="specialist" delay={80} />
+            <Typewriter text="specialist" delay={40} />
           </h1>
           <h1 className="slide-title min-w-[340px] bg-black px-4 text-center text-6xl font-bold text-white">
             <HighlightText>vs</HighlightText>
           </h1>
           <h1 className="slide-title min-w-[340px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="generalist" delay={80} />
+            <Typewriter text="generalist" delay={40} />
           </h1>
         </div>
       )}
@@ -129,13 +129,13 @@ export default function Slide4() {
       {step >= 4 && (
         <div className="absolute bottom-20 right-20 flex flex-col items-start gap-[2px]">
           <h1 className="slide-title w-[380px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="AI skeptical" delay={80} />
+            <Typewriter text="AI skeptical" delay={40} />
           </h1>
           <h1 className="slide-title w-[380px] bg-black px-4 text-center text-6xl font-bold text-white">
             <HighlightText>vs</HighlightText>
           </h1>
           <h1 className="slide-title w-[380px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="AI explorers" delay={80} />
+            <Typewriter text="AI explorers" delay={40} />
           </h1>
         </div>
       )}
@@ -175,13 +175,13 @@ export default function Slide4() {
       {step >= 6 && (
         <div className="absolute bottom-20 left-20 flex flex-col items-start gap-[2px]">
           <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="chaos" delay={80} />
+            <Typewriter text="chaos" delay={40} />
           </h1>
           <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
             <HighlightText>vs</HighlightText>
           </h1>
           <h1 className="slide-title min-w-[300px] bg-black px-4 text-center text-6xl font-bold text-white">
-            <Typewriter text="structure" delay={80} />
+            <Typewriter text="structure" delay={40} />
           </h1>
         </div>
       )}

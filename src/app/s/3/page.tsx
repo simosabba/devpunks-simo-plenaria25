@@ -56,7 +56,7 @@ export default function Slide3() {
               <SlideTitle>
                 <Typewriter
                   text="Come cambia"
-                  delay={80}
+                  delay={30}
                   onComplete={() => setLine1Done(true)}
                   className="text-7xl"
                 />
@@ -65,7 +65,7 @@ export default function Slide3() {
                 <SlideTitle>
                   <Typewriter
                     text="il mondo dei"
-                    delay={80}
+                    delay={30}
                     onComplete={() => setLine2Done(true)}
                     className="text-7xl"
                   />
@@ -75,7 +75,7 @@ export default function Slide3() {
                 <SlideTitle>
                   <Typewriter
                     text="dev con l'AI?"
-                    delay={80}
+                    delay={30}
                     onComplete={() => setLine3Done(true)}
                     className="text-7xl"
                   />
@@ -93,7 +93,7 @@ export default function Slide3() {
                     </HighlightText>
                     <Typewriter
                       text="Si, tantissimo!"
-                      delay={60}
+                      delay={30}
                       className="ml-2"
                     />
                   </p>
@@ -107,7 +107,7 @@ export default function Slide3() {
                     </HighlightText>
                     <Typewriter
                       text="Li provo tutti!"
-                      delay={60}
+                      delay={30}
                       className="ml-2"
                     />
                   </p>

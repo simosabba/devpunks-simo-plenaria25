@@ -42,7 +42,7 @@ export default function Slide1() {
             <SlideTitle>
               <Typewriter
                 text="Ciao,"
-                delay={100}
+                delay={50}
                 onComplete={() => setLine1Done(true)}
                 className="text-7xl"
               />
@@ -51,7 +51,7 @@ export default function Slide1() {
               <SlideTitle>
                 <Typewriter
                   text="sono Simo"
-                  delay={80}
+                  delay={40}
                   onComplete={() => setLine2Done(true)}
                   className="text-7xl"
                 />
@@ -63,7 +63,7 @@ export default function Slide1() {
             <p className="absolute top-26 right-16 max-w-3xl -translate-y-1/2 text-right text-4xl text-black">
               <Typewriter
                 text="sono un dev a cui piace provare tante cose"
-                delay={50}
+                delay={25}
                 onComplete={() => setText1Done(true)}
               />
             </p>
@@ -73,7 +73,7 @@ export default function Slide1() {
             <p className="absolute top-64 right-26 -rotate-3 text-4xl text-black">
               <Typewriter
                 text="per costruire altre cose"
-                delay={90}
+                delay={45}
                 onComplete={() => setText2Done(true)}
               />
             </p>

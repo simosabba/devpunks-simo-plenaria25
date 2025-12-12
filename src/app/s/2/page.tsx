@@ -48,7 +48,7 @@ export default function Slide2() {
           <SlideTitle>
             <Typewriter
               text="Di quale"
-              delay={100}
+              delay={50}
               onComplete={() => setLine1Done(true)}
               className="text-7xl"
             />
@@ -57,7 +57,7 @@ export default function Slide2() {
             <SlideTitle>
               <Typewriter
                 text="progetto mi"
-                delay={80}
+                delay={30}
                 onComplete={() => setLine2Done(true)}
                 className="text-7xl"
               />
@@ -67,7 +67,7 @@ export default function Slide2() {
             <SlideTitle>
               <Typewriter
                 text="occupo?"
-                delay={80}
+                delay={30}
                 onComplete={() => setLine3Done(true)}
                 className="text-7xl"
               />
@@ -81,7 +81,7 @@ export default function Slide2() {
               <HighlightText className="font-bold">
                 <Typewriter
                   text="Di tutto un po e ho visto anche qualche cosetta nuova"
-                  delay={60}
+                  delay={30}
                 />
               </HighlightText>
             </p>
